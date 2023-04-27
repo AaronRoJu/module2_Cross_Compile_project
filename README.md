@@ -7,7 +7,7 @@ This repository has our busy-box implementation, which was implemented in Module
 
 -
 
--
+- Jose Antonio Garibay Chavez
 
 - Aaron Romero Juárez
 
