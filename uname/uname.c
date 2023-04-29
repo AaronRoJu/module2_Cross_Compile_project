@@ -1,5 +1,6 @@
-#include <sys/utsname.h>// for uname
+#include "uname.h"
 
+//en la carpeta uname tiene que tener el .c y el header
 int uname_busy(){
     /*
         Description:
