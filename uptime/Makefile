@@ -1,5 +1,4 @@
 all:
-	@echo "entro a uptime"
 
 clean:
-	rm -rf *.o *.so
+	rm -r *.o *.so

@@ -1,4 +1,4 @@
-all:./cat/cat ./sleep/sleep ./uptime/uptime ./uname/uname
+all: ./uname/uname 
 
 ./cat/cat:
 	cd ./cat/ && make all
@@ -11,6 +11,9 @@ all:./cat/cat ./sleep/sleep ./uptime/uptime ./uname/uname
 
 ./uname/uname:
 	cd ./uname/ && make all
+
+install:
+	gcc -c main.c -o main
 
 clean:
 	cd ./cat/ && make clean

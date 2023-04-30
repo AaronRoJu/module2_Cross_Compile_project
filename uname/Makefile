@@ -1,12 +1,36 @@
-CROSS_COMPILE=
+CC = arm-linux-gnueabihf-gcc
+CFLAGS = -Wall #Create shared library
 
-CC = gcc
-CFLAGS = -Wall -shared -fPIC #Create shared library
-
-APP_NAME= uname
 all:libuname.so
-	$(CC) -c uname.c -luname -o $(APP_NAME).o
-libuname.so:uname.c
-	$(CROSS_COMPILE)$(CC) $(CFLAGS) uname.c -o libuname.so
+	@echo "create libuname.so and uname.o"
+libuname.so:uname.o
+	$(CC) -shared -o libuname.so uname.o
+uname.o:uname.c
+	$(CC) -c -Wall -fPIC uname.c -o uname.o
+
 clean:
-	rm -rf *.o *.so
+	rm -r *.o *.so
+	
+# CROSS_COMPILE=
+
+# CC = gcc
+# CFLAGS = -Wall #Create shared library
+
+# APP_NAME= uname
+# PATH=/usr/lib
+
+# all:libuname.so
+# 	@echo "entrnaod a uname"
+# libuname.so:uname.o
+# 	gcc -shared -o libuname.so uname.o
+# uname.o:uname.c
+# 	gcc -c -Wall -fPIC uname.c -o uname.o
+
+# all:
+# 	@echo "entrnaod a uname"
+	
+# libuname.so:uname.o
+# 	gcc -shared -o libuname.so uname.o
+# uname.o:uname.c
+# 	gcc -c -Wall -fPIC uname.c -o uname.o
+
