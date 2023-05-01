@@ -1,6 +1,6 @@
 APP_NAME=busy_box_cross
 
-all: ./uname/uname 
+all: ./uname/uname ./sleep/sleep
 
 ./cat/cat:
 	cd ./cat/ && make all

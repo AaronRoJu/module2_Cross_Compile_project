@@ -5,7 +5,7 @@ This repository has our busy-box implementation, which was implemented in Module
 
 -
 
--
+- Edher Misael Carbajal Rosales
 
 - Jose Antonio Garibay Chavez
 
