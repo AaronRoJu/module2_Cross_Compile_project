@@ -1,4 +1,4 @@
-#include <sys/sysinfo.h>
+#include "uptime.h"
 
 
 int uptime_busy(){
