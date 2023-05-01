@@ -4,7 +4,7 @@
 #include "sleep/sleep.h"
 
 int main(int argc, char **argv){
-
+    printf("Enter to main\n");
     //************SLEP************
     if((strcmp("./sleep", argv[0])==0) || (strcmp("sleep", argv[0])==0)){
 
@@ -29,9 +29,13 @@ int main(int argc, char **argv){
         }
 
     }
+    //************CAT************
+    else if((strcmp("./cat", argv[0])==0) || (strcmp("cat", argv[0])==0)){
+        cat_busy(argv[1]);
+    }
 
     //************UNAME************
-    if((strcmp("./uname", argv[0])==0) || (strcmp("uname", argv[0])==0)){
+    else if((strcmp("./uname", argv[0])==0) || (strcmp("uname", argv[0])==0)){
         if(argc == 1){
             uname_busy();            
         }
@@ -43,7 +47,7 @@ int main(int argc, char **argv){
 
 
     printf("Enter to main\n");
-    cat_busy("foo.txt");
+    //cat_busy("foo.txt");
     //uname_busy();
     //sleep(sleep_busy(3));
     
