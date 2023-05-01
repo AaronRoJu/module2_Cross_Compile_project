@@ -4,7 +4,7 @@
 #include "sleep/sleep.h"
 
 int main(int argc, char **argv){
-
+    printf("Enter to main\n");
     //************SLEP************
     if((strcmp("./sleep", argv[0])==0) || (strcmp("sleep", argv[0])==0)){
 
@@ -28,12 +28,10 @@ int main(int argc, char **argv){
             printf("Not enough arguments (or more than 2)...\n");
         }
 
+    }else if((strcmp("./cat", argv[0])==0) || (strcmp("cat", argv[0])==0)){
+        cat_busy(argv[1]);
     }
 
-
-
-    printf("Enter to main\n");
-    cat_busy("foo.txt");
     uname_busy();
     sleep(sleep_busy(3));
     
