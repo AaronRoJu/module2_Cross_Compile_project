@@ -32,16 +32,12 @@ int main(int argc, char **argv){
 
     //************UNAME************
     if((strcmp("./uname", argv[0])==0) || (strcmp("uname", argv[0])==0)){
-
-        
-
         if(argc == 1){
             uname_busy();            
         }
         else{
             printf("Not enough arguments (or more than 1)...\n");
         }
-
     }
 
 
