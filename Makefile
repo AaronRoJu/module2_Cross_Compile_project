@@ -1,6 +1,6 @@
 APP_NAME=busy_box_cross
 
-all: ./uname/uname ./sleep/sleep
+all: ./uname/uname ./sleep/sleep ./cat/cat
 
 ./cat/cat:
 	cd ./cat/ && make all
@@ -15,7 +15,7 @@ all: ./uname/uname ./sleep/sleep
 	cd ./uname/ && make all
 
 install:
-	arm-linux-gnueabihf-gcc main.c -luname -lcat -o $(APP_NAME)
+	arm-linux-gnueabihf-gcc main.c -luname -lcat -lsleep -o $(APP_NAME)
 	scp busy_box_cross debian@192.168.7.2:/home/debian/
 clean:
 	# cd ./cat/ && make clean
@@ -23,3 +23,4 @@ clean:
 	# cd ./uptime/ && make clean
 	cd ./uname/ && make clean
 	cd ./cat/ && make clean
+	cd ./sleep && make clean
